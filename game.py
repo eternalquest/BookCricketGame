@@ -1,12 +1,12 @@
 import random
-
+#roll of dice with values between 1 and 6
 def roll():
     min_value =1
     max_value=6
     roll=random.randint(min_value,max_value)
 
     return roll
-
+#taking input from user about number of players
 while True:
     players = input("enter the number of players (2-4):")
     if players.isdigit():
@@ -18,8 +18,9 @@ while True:
     else:
         print("Invalid, try again.")
 
-
+#maximum score of the game
 max_score=50
+#scores of player according to the number of players 
 player_scores=[0 for _ in range(players)]
 
 while max(player_scores) < max_score:
